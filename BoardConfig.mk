@@ -26,6 +26,7 @@ USE_CAMERA_STUB := true
 
 # Default values, if not overridden else where.
 TARGET_BOARD_INFO_FILE ?= device/samsung/tuna/board-info.txt
+AUDIO_FEATURE_DISABLED_DS1_DOLBY_DDP := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR ?= device/samsung/tuna/bluetooth
 
 TARGET_CPU_ABI := armeabi-v7a
