@@ -50,6 +50,9 @@ on post-fs-data
     chmod 0660 /sys/devices/tuna_otg/uart_sel
     chmod 0660 /sys/devices/tuna_otg/usb_sel
 
+	# run sysinit
+	start sysinit
+	
 on boot
 	mount debugfs /sys/kernel/debug /sys/kernel/debug
 	chmod 0666 /dev/pvrsrvkm
@@ -275,3 +278,7 @@ service iprenew_eth0 /system/bin/dhcpcd -n
 
 service battery_charger /charger
 	class charger
+
+# sysinit (system/etc/init.d)
+service sysinit /system/bin/sysinit
+	oneshot
